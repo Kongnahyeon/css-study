@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 50vh;
+}
+
+/* align-items 속성
+- stretch : 자식이 높이를 가지고 있지 않을 시 자기 자신의 높이 만큼 늘려줌
+*/
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: tomato;
+    color: #ffffff;
+}
+
+.box:nth-child(2) {
+}
+
+.box:nth-child(3) {
+}
