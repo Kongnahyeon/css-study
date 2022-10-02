@@ -1,0 +1,21 @@
+.father {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.children {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    font: 30px;
+}
+
+.children:nth-child(1) {
+    order: 3;
+}
+
+.children:nth-child(2) {
+    order: 1;
+}

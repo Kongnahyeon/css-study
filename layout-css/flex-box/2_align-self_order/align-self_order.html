@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self and order</title>
+
+    <link rel="stylesheet" href="align-self_order.css">
+</head>
+<body>
+    <div class="father">
+        <div class="children">1</div>
+        <div class="children">2</div>
+        <div class="children">3</div>
+    </div>
+    
+
+    <!-- 
+        - 자식에게만 줄 수 있는 속성 (단, 부모가 높이값을 가지고 있어야 함!)
+
+        ** align-self property **
+        : 부모가 자식에게 주는 속성이아닌, flex의 영향을 받는 자식이 자기자신에게만 별도로 부여하는 속성
+
+        ex) .wrapper 가 flex / align-items: center를 가지고 있을때
+        그 자식 .children 1에게 align-self: flex-start를 적용하면 .children 1만 flex-start의 속성을 가짐
+
+        ** order property **
+        : html을 변경할 수 없을 상황일 때 위치가 변환되어야 하는 경우
+        : 기본적으로 order: 0;
+    -->
+</body>
+</html>
