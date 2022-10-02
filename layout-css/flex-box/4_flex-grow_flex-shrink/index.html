@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow / flex-shrink</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="father">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+
+    <!--
+        - 자식이 가질 수 있는 property
+        => 반응형 디자인을 했을 시 유용하게 사용가능한 속성 (ex, header...)
+
+        ** flex-shrink
+        : flex-shrink : 1; 기본값
+          ex) box 1 / box 2 / box 3 이 있다고 가정했을 시
+          flex-shrink: 2를 box 2에만 적용시켰다고 하면,
+          화면이 줄어 들때 box 1, box 3보다 2배가 줄어드는 속성
+
+        ** flex-grow
+        : flex-grow : 0; 기본값
+        : 남아있는 빈 공간을 가져오거나, 해당 element가 가질 수 있는 만큼 커지는 속성 (박스의 주변공간을 가져오는 것)
+        : flex-shrink와 반대로 화면이 커질때 나타나는 속성으로 화면이 다시 줄어들면, 다른 element와 동일한 width값을 가지며 줄어든다.
+
+
+    -->
+    
+</body>
+</html>
