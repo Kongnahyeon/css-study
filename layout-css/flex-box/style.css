@@ -1,12 +1,15 @@
 .wrapper {
     display: flex;
+    flex-direction: column;
+    /* Main Axis */
     justify-content: space-around;
-    align-items: flex-end;
-    height: 50vh;
+    /* Cross Axis */
+    align-items: center;
+    height: 100vh;
 }
 
 /* align-items 속성
-- stretch : 자식이 높이를 가지고 있지 않을 시 자기 자신의 높이 만큼 늘려줌
+- stretch : 자식이 높이를 가지고 있지 않을 시 자기 자신의 높이 or 넓이 만큼 늘려줌
 */
 
 .box {
