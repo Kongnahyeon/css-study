@@ -9,7 +9,7 @@
     width: 200px;
     height: 200px;
     background-color: aquamarine;
-    font: 30px;
+    font-size: 30px;
 }
 
 .children:nth-child(1) {
