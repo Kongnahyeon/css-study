@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self and order</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="father">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+    </div>
+
+    <!--
+        - flex의 속성
+          : box의 넓이를 고정으로 주더라도 한줄에 있는게 우선이라, 화면의 넓이가 줄어들면 box의 넓이도 줄어듬
+
+        * flex-wrap
+          - nowrap : 다음줄로 떨어지지 않고, 한줄에 모든 박스를 정렬함
+          - wrap : 지정했던 box의 width를 유지한채 다음줄로 떨어짐
+
+
+        * -reverse
+        : html에서는 변경되지 않지만, 진행방향을 변경 (1,2,3 -> 3,2,1)
+          - row-reverse : 수평을 기준으로 진행방향을 변경
+          - column-reverse : 수직을 기준으로 진행방향을 변경
+          - wrap-reverse : 하단을 기준으로 (아래 -> 위 ) 진행방향을 변경
+
+        * align-content
+        : line을 변경
+    -->
+    
+</body>
+</html>
