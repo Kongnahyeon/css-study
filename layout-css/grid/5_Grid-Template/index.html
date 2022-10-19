@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="header"></div>
+        <div class="content"></div>
+        <div class="nav"></div>
+        <div class="footer"></div>
+    </div>
+
+
+    <!--
+          * fr = fraction(부분) = (grid에서) 사용 가능한 공간
+            => pixel이나 %와 같은 측정단위
+            => body 전체를 이용해서 변경이 됨
+            => fr의 장점 ) 화면의 비율에 따라 조절이 됨, 레이아웃이 깨지지 않음
+
+
+          ** 제일 많이 실수하는 부분!
+          - grid-template-rows: repeat(4, 1fr);
+            : column의 경우 브라우저마다 사이즈가 있지만,
+              row의 경우 height 값을 지정해주지않고 "fr"을 사용하게 된다면, 공간이 없기때문에 나타나지 않음
+
+        
+          * 각각의 element에 "grid-area"로 naming을 해주면
+            grid-template에서 column / row를 설정할 수 있음
+
+            -----
+            grid-template: 
+            "header header header header" 1fr
+            "content content content nav" 2fr
+            "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr
+            -----
+            => column을 생각하며 디자인 하고 "" 뒤 , 즉 마지막에 row의 높이를 정하면서 배치할 수 있음
+            => 제일 마지막에 / 이후 각각의 cell의 구체적인 넓이도 설정해줄 수 있음
+
+          
+          * grid-template 안에서 [naming]을 정해줄 수 있음
+            - 해당 그리드 가이드가 좀더 깔끔하고 작성한 내용을 쉽게 알아 볼 수 있음
+            - [naming]은 작성 해도 되고, 안해도 됨 (잘 사용하지는 않는듯)
+            - 끝에만 사용을 해도 되고, 처음에만 사용해도 됨 (선택)
+
+            grid-template: 
+            [header-start] "header header header header" 1fr [header-end] 
+
+
+          * grid-template 안에서는 repeat적용이 되지 않음
+            - [footer-start] "footer footer footer footer" 1fr  [footer-end] / 1fr 1fr 1fr 1fr
+            => [footer-start] "footer footer footer footer" 1fr  [footer-end] / repeat(4, 1fr)
+            이렇게 작성이 안된다는 말
+
+    -->
+
+</body>
+</html>
