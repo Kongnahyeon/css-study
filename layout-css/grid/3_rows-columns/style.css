@@ -1,0 +1,55 @@
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+}
+
+.header {
+    background-color: hsl(303, 79%, 72%);
+    /* 해당 내용을 간략하게 적을 수 있음
+    grid-column-start: 1;
+    grid-column-end: 5;
+    */
+    /* grid-column: 1 / 5; */
+    /* grid-column: 1 / -1; */
+    grid-column: span 4;
+
+}
+
+.content {
+    background-color: #A460ED;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 4;
+    */
+    /* grid-column: 1 / 4; */
+    grid-column: 1 / -2;
+    /*
+    grid-row-start: 2;
+    grid-row-end: 4;
+    */
+    /* grid-row: 2 / 4; */
+    grid-row: 2 / span 2;
+}
+
+.nav {
+    background-color: #9FC9F3;
+    /*
+    grid-row-start: 2;
+    grid-row-end: 4;
+    */
+    grid-row: 2 / 4;
+}
+
+.footer {
+    background-color: #EEEEEE;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 5;
+    */
+    /* grid-column: 1 / 5; */
+    /* grid-column: 1 / -1; */
+    grid-column: span 4;
+
+}

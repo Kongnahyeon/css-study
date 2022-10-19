@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rows and Columns / shortcuts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="header"></div>
+        <div class="content"></div>
+        <div class="nav"></div>
+        <div class="footer"></div>
+    </div>
+
+
+    <!--
+        * grid-area를 사용하지 않고, 지정 columns / row 안에서 행과 열의 크기 설정이 가능함
+        - grid-column-star: 1;
+          gird-column-end: 2;
+
+          => 이렇게 start / end로 시작과 끝을 정해 줄 수있는데,
+             columns / rows 경우 1,2,3... 이게 해당 element의 위치가 아닌, 해당 column / rows의 line을 기준으로 시작과 끝을 정함
+
+
+        * grid-column-start or end : auto 나 100%는 적용이 안됨
+
+        * start와 end를 각각 적지 않고 간략하게 작성도 가능함
+          - grid-column-start / end
+          => grid-column: start / end;
+
+          - grid-row-start / end
+          => grid-row: start / end;
+
+        
+        * 또 다른 방법으로는 시작점과 끝점을 정확하게 적어주는 대신
+          "첫번째 줄부터 마지막 줄까지" 이렇게도 지정을 해줄 수 있음
+          - 몇 개의 line을 갖고있는지 일일이 세어보지 않아도 가능함
+
+          => -1, -2, -3 : 끝에서 부터 지정을 해주는 것
+             ex) -1은 제일 마지막, -2는 마지막에서 앞 ...
+
+        
+        * 또 다른 방법으로는 grid-column의 시작과 끝을 적는 대신
+          span을 사용할 수 있음
+          - cell = 사각형 하나하나 = span (수직, 수평 모두 차지)
+          - 공간 전체를 차지하지 않는 element는 시작점을 지정해 주지 않으면, span만으로는 설정할 수 없음
+          ex) .content { grid-row: span 2;}로 하게 되면, 시작점이 없어 내가 생각하는 UI가 만들어 지지않음
+          그렇다면 여기서 추가해줘야하는 것은 {grid-row: 2 / span 2;} 이렇게 시작점을 지정해주거나 같은 row를 차지하는 다른 element에서도 동일하게 {grid-row: span 2;}를 적용해주면됨
+
+
+        ---------- << 요약 >> ----------
+        ** 그리드의 속성 중 각각이 element의 행과 열의 크기를 설정해 줄 수 있음
+
+        1) 기본
+        - grid-column-start / grid-column-end
+        - grid-row-start / grid-row-end
+
+        2) start와 end를 한번에 적용시키는 방법
+        - grid-column: 1(start) / 2(end);
+        - grid-row: 1(start) / 2(end);
+
+        3) line의 갯수를 세지 않고 지정해주는 방법
+        - grid-column : 1 / -1
+          = -1, -2, -3 ... 끝에서 부터 지정가능
+          
+        4) span을 이용하여 적용시키는 방법
+        - grid-column: span 4; 
+          = 4칸의 cell을 이용하는 것 (cell = span)
+        - 하지만, span은 시작line과 끝line을 나타내지않기 때문에
+          상황에 따라 다른 element와의 상황을 봐야함
+
+          * 동일 라인 element에게도 span 으로 적용을 하던지,
+          (
+            .content { grid-column: span 2;}
+            .nav { grid-column: span 2;}
+          )
+
+          * 시작점을 지정해주던지 해야함
+          (
+            .content { grid-column: 2 / span 2;}
+          )
+
+    -->
+
+</body>
+</html>
