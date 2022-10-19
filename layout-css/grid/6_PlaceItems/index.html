@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Items</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="header">header</div>
+        <div class="content">content</div>
+        <div class="nav">nav</div>
+        <div class="footer">footer</div>
+    </div>
+
+
+    <!--
+          * grid - justify-content : 기본값 stretch
+                 - align-items : 기본값 stretch
+            => 즉, grid-container은 모든 grid 자식을 가지고 있고
+               자식들을 늘여서 부모를 채우게 만드는 것
+
+          * grid 자체는 column / row의 크기를 그대로 가지고 있지만,
+            item의 경우 < justify-content : center, start... > 변경하면 부모의 넓이만큼 늘어나지 않음.
+
+
+          * justify-content : 수평 / align-items : 수직
+            이것 또한 간략하게 사용이 가능함
+            => place-items : y x;
+               place-items : align-items justify-content;
+
+    -->
+
+</body>
+</html>

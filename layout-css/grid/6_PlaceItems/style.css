@@ -1,0 +1,26 @@
+.grid {
+    display: grid;
+    gap: 5px;
+    height: 50vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /* justify-items: end; - 수평
+    align-items: end; - 수직 */
+    place-items: stretch center;
+}
+
+.header {
+    background-color: #FF6B6B;
+}
+
+.content {
+    background-color: #FFD93D;
+}
+
+.nav {
+    background-color: #6BCB77;
+}
+
+.footer {
+    background-color: #4D96FF;
+}
