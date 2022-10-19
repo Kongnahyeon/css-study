@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Naming</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="header"></div>
+        <div class="content"></div>
+        <div class="nav"></div>
+        <div class="footer"></div>
+    </div>
+
+
+    <!--
+          * line에 이름을 붙여줄 수 있다.
+          - display: grid를 가지고 있는 부모에게 설정하면 됨
+          - row, column 둘다 사용 가능
+
+          - grid-template-columns: repeat(4, 100px);
+            대신에,
+
+            grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line];
+
+            이렇게 []안에 이름을 지정해준 뒤
+            하위 자식요소들이 개별적으로
+            => grid-column: first-line / fourth-line;
+            name을 가지고 작성해도 가능함
+
+
+          - grid-template-rows: repeat(4, 100px [sexy-line]);
+            repeat 내에서도 사용이 가능함.
+
+            다만, 제일 마지막에 [naming]을 넣을 경우 기존방식과는 다르게
+            first-line이 없는 것으로 시작점을 -1씩 내려줘야함
+            => 100px [sexy-line], 100px [sexy-line] ...
+
+          - grid-template-rows: repeat(4, [sexy-line] 100px);
+            반대로 이렇게 하면 기존의 방식대로 사용이 가능함
+            => [sexy-line] 100px, [sexy-line] 100px ...
+
+
+    -->
+
+</body>
+</html>
