@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min-content / max-content</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="item">This is a very long text</div>
+        <div class="item">This is a very longer longer longer text</div>
+        <div class="item">This is a very longer longer longer text</div>
+        <div class="item">This is a very text</div>
+        <div class="item">This is a very longer longer longer text</div>
+    </div>
+
+    <!--
+         * min-content / max-content
+           -> 안에 들어있는 content의 크기에 따라 min / max의 사이즈가 정해짐
+           -> 따로 사이즈를 계산하지 않아도 browser가 자동적으로 계산해줌
+
+         * min-content
+           : box가 있다고 가정했을때 가능한한 아주 작은 사이즈로 만드는 것
+           : txt가 있다고 한다면, 해당 text의 가장 최소의 사이즈 까지 줄여짐
+             ex) this is text 라는 글자가 있으면 this의 크기까지 줄여짐
+            
+            => content의 크기를 최대한 줄이고 cell의 크기를 content에 맞춤
+
+         * max-content
+           : content가 필요한 만큼 크게 만드는 것
+           : txt가 있다고 한다면, 해당 text의 최대 사이즈 까지 넓어짐
+             ex) this is text 라는 글자가 있으면 해당 모든 글자가 나열되는 넓이까지 넓어짐
+
+           => content의 크기 만큼 cell의 크기를 늘림
+
+        
+         * content를 깨지지않게 보존하면서 re-sizing하는 법
+           grid-template-columns: repeat(5, minmax(max-content, 1fr));
+           이런식으로 minmax, max-content, min-content를 적절하게 사용하게되면, 반응형 사이트제작시 아주 최고의 방법으로 사용될 수 있음
+    -->
+
+</body>
+</html>
