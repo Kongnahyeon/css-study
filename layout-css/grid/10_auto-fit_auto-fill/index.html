@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fit / auto-fill</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    auto-fill
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    auto-fit
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <!--
+         * auto-fit / auto-fill => repeat function안에서만 사용
+           -> 두개를 이용할 시 반응형 사이트에서 유용하게 사용가능함.
+           -> repeat()의 첫번째 인자로 직접 숫자로 지정해주는 것보다 auto-fill, auto-fit을 사용하는 것을 추천
+
+         * auto-fill
+           : column이 있는 만큼 가능한한 많이 만들어 주는 것
+             column이 비었더라도 빈 column들로 row를 채워줌
+             남는 공간을 빈 cell로 가득 채워줌
+
+         * auto-fit
+           : 현재 element를 stretch해서 가득 채워줌
+             현재 element들을 row에 딱 맞게 해주는 것
+
+
+         => 화면이 작을때는 둘다 동일하게 나오지만, 화면이 넓어질수록 두개의 차이점이 확연하게 드러난다.
+         fit은 말그대로 화면을 fit하게 채워주는 것 (갯수에 상관없이 빈공간이 없음)
+         fill은 element들로 화면을 채워주는 것
+    -->
+
+</body>
+</html>
